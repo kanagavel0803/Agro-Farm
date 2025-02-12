@@ -1,0 +1,172 @@
+.auth-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(218, 235, 218);
+    padding-top: 20px; /* Ensures space without affecting layout */
+}
+
+.auth-box {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    height: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.signup-panel, .login-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+/* White background for Signup Form */
+.signup-panel.signup-form {
+    background: white;
+    color: black;
+}
+
+/* Green background for Login Message */
+.login-panel.login-message {
+    background: darkgreen;
+    color: white;
+}
+
+/* White background for Login Form */
+.login-panel.login-form {
+    background: white;
+    color: black;
+}
+
+/* Green background for Signup Message */
+.signup-panel.signup-message {
+    background: darkgreen;
+    color: white;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.login-input, .signup-input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    background: #f1f1f1;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.login-input:focus, .signup-input:focus {
+    background: white;
+    border-color: darkgreen;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 100, 0, 0.3);
+}
+
+.login-btn, .signup-btn {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.login-btn {
+    background: white;
+    color: darkgreen;
+    border: 1px solid darkgreen;
+}
+
+.login-btn:hover {
+    background: #f1f1f1;
+    transform: scale(1.05);
+}
+
+.signup-btn {
+    background: white;
+    color: darkgreen;
+    border: 1px solid darkgreen;
+}
+
+.signup-btn:hover {
+    background: #f1f1f1;
+    transform: scale(1.05);
+}
+
+.forgot-password {
+    color: darkgreen;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+.forgot-password:hover {
+    color: #0a5c0a;
+}
+
+.google-login-btn {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #2b922b ;
+    border: 1px solid #0a5c0a;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.google-signup-btn:hover {
+    background: #e8f0fe;
+}
+
+.google-signup-btn {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #2b922b ;
+    border: 1px solid #0a5c0a;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.google-login-btn:hover {
+    background: #e8f0fe;
+}
+
+.google-icon {
+    margin-right: 10px;
+}
+
+
+
