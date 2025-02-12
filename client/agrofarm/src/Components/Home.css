@@ -1,0 +1,109 @@
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Home Container */
+.home {
+    width: 100vw;
+    min-height: 100vh;
+    background: #e0f7e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Banner Section */
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: url("https://res.cloudinary.com/dvuh4fz9d/image/upload/v1648390942/farm-compressed_dqjqsw.webp") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Overlay for better readability */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+    top: 0;
+    left: 0;
+}
+
+/* Banner Card */
+/* Banner Card */
+.banner-card {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent effect */
+    padding: 20px 50px;
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(2px); /* Glassmorphism effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-width: 600px;
+    margin-top: 90px; /* Moves the card downward */
+}
+
+
+/* Banner Text */
+.banner-card h1 {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+}
+
+.banner-card p {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+}
+
+.banner-card p span {
+    color: #ffff66; /* Light yellow for emphasis */
+}
+
+/* Shop Now Button */
+.shop-now {
+    background: linear-gradient(to right, #74bb98 0%, #1a591a 51%, #74bb98 100%);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.shop-now:hover {
+    background: green;
+}
+
+
+/* Categories Section */
+.categories {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    
+}
+
+.categories h2 {
+    font-size: 28px;
+    font-weight: bold;
+}

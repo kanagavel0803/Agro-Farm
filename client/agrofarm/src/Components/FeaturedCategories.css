@@ -1,0 +1,88 @@
+/* Categories Section */
+.categories {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0;
+    background: rgb(218, 235, 218) /* Light background for contrast */
+}
+
+.categories h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0a5c0a; /* Dark Green */
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+/* Underline Styling */
+.categories h2::after {
+    content: "";
+    display: block;
+    width: 50%; /* Adjust width as needed */
+    height: 4px; /* Thickness of underline */
+    background-color: #0a5c0a; /* Same green as text */
+    margin: 5px auto 0; /* Centers the underline */
+}
+
+/* Category Grid */
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Category Card */
+.category-card {
+    background: #ffffff; /* White background for a clean look */
+    padding: 15px; 
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 330px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #0a5c0a; /* Light border */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure all images have the same size */
+.category-card img {
+    width: 100%;
+    height: 220px; /* Increased height for better proportions */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
+.category-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #0a5c0a; /* Dark Green */
+    color: white;
+    padding: 12px;
+    margin-top: 10px; /* Reduced space to 2cm */
+    border-radius: 6px;
+    text-transform: uppercase;
+    width: 90%;
+    text-align: center;
+}
+
