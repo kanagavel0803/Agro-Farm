@@ -1,27 +1,38 @@
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { useProduct } from "../context/product-context";
+import React from "react";
+import "./FeaturedCategories.css";
 
-const FeaturedCategories = ({ imgSrc, categoryTitle }) => {
-  const { dispatchFilters } = useProduct();
+const categories = [
+  {
+    id: 1,
+    title: "Sugarcane",
+    image: "/images/sugarcane.webp",
+  },
+  {
+    id: 2,
+    title: "Paddy",
+    image: "/images/paddy.jpg",
+  },
+  {
+    id: 3,
+    title: "Vegetable Seeds",
+    image: "/images/otherseeds.jpg",
+  },
+];
 
-  const handleCategoryClick = () => {
-    dispatchFilters({ type: "HOME-CATEGORIES-LINK", payload: categoryTitle });
-  };
-
+const FeaturedCategories = () => {
   return (
-    <div className="category-items">
-      <Link to="/products" onClick={handleCategoryClick} className="block text-center">
-        <p className="category-item-text para-lg font-bold">{categoryTitle}</p>
-        <img className="img-responsive mx-auto" src={imgSrc} alt={categoryTitle} />
-      </Link>
-    </div>
+    <section className="categories">
+      <h2>Featured Categories</h2>
+      <div className="category-container">
+        {categories.map((category) => (
+          <div key={category.id} className="category-card">
+            <img src={category.image} alt={category.title} />
+            <h3>{category.title}</h3>
+          </div>
+        ))}
+      </div>
+    </section>
   );
-};
-
-FeaturedCategories.propTypes = {
-  imgSrc: PropTypes.string.isRequired,
-  categoryTitle: PropTypes.string.isRequired,
 };
 
 export default FeaturedCategories;
