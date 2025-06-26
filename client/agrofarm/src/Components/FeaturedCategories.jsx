@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./FeaturedCategories.css";
 
 const categories = [
@@ -20,6 +21,8 @@ const categories = [
 ];
 
 const FeaturedCategories = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="categories">
       <h2>Featured Categories</h2>
@@ -27,7 +30,12 @@ const FeaturedCategories = () => {
         {categories.map((category) => (
           <div key={category.id} className="category-card">
             <img src={category.image} alt={category.title} />
-            <h3>{category.title}</h3>
+            <button
+              className="shop-button"
+              onClick={() => navigate("/shop")}
+            >
+              {category.title}
+            </button>
           </div>
         ))}
       </div>

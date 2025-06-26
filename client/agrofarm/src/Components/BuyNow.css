@@ -1,0 +1,99 @@
+.page-wrapper {
+
+  padding: 20px;
+  position: relative;
+  z-index: 3;
+  background-color: #f4f9f4;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 30px;
+  color: #2c722e;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  margin-top: 30px;
+}
+
+/* Main container */
+.buy-now-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 3;
+
+}
+
+/* Card */
+.buy-now-card {
+  background-color: white;
+  margin-top: 50px;
+  border-radius: 20px;
+  padding: 40px;
+  width: 320px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.buy-now-card:hover {
+  transform: scale(1.03);
+}
+
+/* Image */
+.buy-now-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: -60px;
+  background: white;
+}
+
+/* Info */
+.buy-now-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0 8px;
+  color: #2e7d32;
+}
+
+.buy-now-card p {
+  font-size: 16px;
+  margin: 6px 0;
+  color: #555;
+}
+
+/* Button */
+.buy-now-card button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  grid-column: 10px;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.buy-now-card button:hover {
+  background-color: #2e7d32;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .buy-now-card {
+    width: 90%;
+  }
+}

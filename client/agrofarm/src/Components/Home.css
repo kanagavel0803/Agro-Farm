@@ -44,19 +44,19 @@ html, body {
 /* Banner Card */
 .banner-card {
     background: rgba(255, 255, 255, 0.1); /* Light transparent effect */
-    padding: 20px 50px;
+    padding: 40px 80px;
     border-radius: 12px;
     text-align: center;
     backdrop-filter: blur(2px); /* Glassmorphism effect */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    max-width: 600px;
+    max-width: 800px;
     margin-top: 90px; /* Moves the card downward */
 }
 
 
 /* Banner Text */
-.banner-card h1 {
+.banner-card h2{
     font-size: 40px;
     color: white;
     font-weight: bold;

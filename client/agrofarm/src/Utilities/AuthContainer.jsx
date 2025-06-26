@@ -12,9 +12,16 @@ const AuthContainer = () => {
 
   return (
     <div className="auth-wrapper">
-      {isLogin ? <Login toggle={toggleForm} /> : <Signup toggle={toggleForm} />}
+      {/* Background Image with Blur */}
+      <div className="auth-bg"></div>
+
+      {/* Content */}
+      <div className="auth-content">
+        {isLogin ? <Login toggle={toggleForm} /> : <Signup toggle={toggleForm} />}
+      </div>
     </div>
   );
 };
 
 export default AuthContainer;
+

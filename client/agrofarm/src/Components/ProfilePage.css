@@ -1,0 +1,304 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(218, 235, 218);
+}
+
+/* Profile Container with background image */
+.profile-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  background: url("/images/bg.jpg") no-repeat center center fixed; /* <-- Your image path */
+  background-size: cover;
+  padding: 40px;
+}
+
+/* Overlay to soften background */
+.profile-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* White semi-transparent overlay */
+  z-index: 1;
+}
+
+/* All children stay above the overlay */
+.sidebar,
+.profile-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Sidebar as a Card */
+.sidebar {
+    width: 230px;
+     background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    color: white;
+    padding: 15px;
+    margin-top: 90px;
+    margin-left: 50px;
+    height: 500px; /* Not full height */
+    display: flex;
+    flex-direction: column;
+    position: sticky; /* Sticky instead of fixed */
+    top: 20px; /* Distance from top */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* User Info */
+.user-info {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Profile Image */
+.profile-img {
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    color: #1e4d32;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 3px solid #ffc107;
+}
+
+/* Menu Items */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.menu li {
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 8px;
+}
+
+.menu li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Profile Content */
+.profile-content {
+    margin-left: 120px; /* Reduce left margin */
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Profile Card & Address Card - Move Left */
+.profile-card, .address-card, .orders-card{
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    min-height: 400px;
+    margin: 70px 0 80px 10px; /* Reduce left margin */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Profile Details */
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Form Groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Birthdate */
+.birthdate {
+    display: flex;
+    gap: 5px;
+}
+
+.birthdate input {
+    width: 50px;
+    text-align: center;
+}
+
+/* Gender Options */
+.gender-options {
+    display: flex;
+    gap: 10px;
+}
+
+/* Add Address Button */
+.add-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.add-address button {
+    background: #1e4d32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-address button:hover {
+    background: #4a8a65;
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: green;
+    font-weight: bold;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+/* No Orders Section */
+.no-orders {
+    text-align: center;
+}
+
+.no-orders-img {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.view-products-btn {
+    background: #1e4d32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.view-products-btn:hover {
+    background: #4a8a65;
+}
+
+/* Refer a Friend Card */
+.refer-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    min-height: 400px;
+    margin: 70px 0 80px 10px;
+    text-align: center;
+}
+
+.referral-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.referral-code {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e4d32;
+}
+
+.copy-btn {
+    background: #1e4d32;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.copy-btn:hover {
+    background: #4a8a65;
+}
+
+.share-btn {
+    background: #ffc107;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.share-btn:hover {
+    background: #e0a800;
+}
+.change-password-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    min-height: 400px;
+    margin: 70px 0 80px 10px;
+}
+.form-group1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Adds spacing between input fields */
+}

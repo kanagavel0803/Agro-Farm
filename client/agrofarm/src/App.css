@@ -12,8 +12,13 @@ body, html {
   width: 100%;
   height: 100%;
   margin: 0;
+  margin-top: 140px;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+.page-wrapper {
+  padding-top: 70px; /* same as your fixed header height */
 }
 

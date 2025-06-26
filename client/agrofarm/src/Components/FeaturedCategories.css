@@ -86,3 +86,18 @@
     text-align: center;
 }
 
+.shop-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+  background-color: #1b5e20;
+}
